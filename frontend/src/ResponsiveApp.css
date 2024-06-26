@@ -1,0 +1,1220 @@
+/* ---------------------- FOR SMALL-SIZED SCREENS ---------------------------- */
+
+/* -------- Declaring Variables --------- */
+:root {
+  --background: linear-gradient(
+    to right,
+    rgb(255, 138, 146),
+    rgb(255, 175, 184)
+  );
+  --dark-color: rgb(97, 37, 53);
+  --red-color: rgb(173, 14, 14);
+  --light-color: #fffaf5;
+  --white: rgb(255, 253, 255);
+  --black: rgb(0, 0, 0);
+  --text-color: #545252e8;
+}
+
+/* -------- Animation Keyframes ------- */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -------- Navbar ------- */
+@media screen and (max-width: 1200px) {
+  header {
+    padding: 2rem 1rem;
+  }
+  .logo-container {
+    width: 60px;
+    height: 60px;
+  }
+  .nav-links-large a {
+    font-size: 1.1rem;
+  }
+  .profile-icon-large {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo-container {
+    width: 55px;
+    height: 55px;
+  }
+  .nav-links-large a {
+    font-size: 1rem;
+  }
+  .profile-icon-large {
+    height: 2.3rem;
+    width: 2.3rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    padding: 2rem 0.5rem;
+    height: 10vh;
+  }
+  .logo-container {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-links-large a {
+    margin: 0 0.9rem;
+    font-size: 0.9rem;
+  }
+  .view-request-badge {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+  .profile-icon-large {
+    height: 2.1rem;
+    width: 2.1rem;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem 3rem;
+    /* height: 9vh; */
+  }
+  .nav-links-large {
+    display: none;
+  }
+  .profile-icon-large {
+    display: none;
+  }
+  .nav-container-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburger-container svg {
+    font-size: 1.8rem;
+    color: var(--red-color);
+    margin: 0 1.5rem -0.5rem 0;
+  }
+  .nav-links-small {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 1.8rem;
+    background-color: var(--light-color);
+    box-shadow: 0px 2px 5px 0 var(--dark-color);
+  }
+  .nav-links-small {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links-small a {
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--red-color);
+    font-weight: 550;
+    transition: 0.5s;
+    animation: slideTop 0.5s ease forwards;
+  }
+  .profile-icon-small {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    padding: 2rem 1rem;
+    height: 8vh;
+  }
+  .hamburger-container svg {
+    font-size: 1.65rem;
+  }
+  .profile{
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  .profile-icon-small {
+    height: 2.2rem;
+    width: 2.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* -------- Footer ------- */
+@media screen and (max-width: 1200px) {
+  .footer-division:nth-child(3) {
+    flex-basis: 35%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .company-name {
+    font-size: 1rem;
+  }
+  .company-tagline {
+    font-size: 0.7rem;
+  }
+  .footer-nav-links-container h2 {
+    font-size: 1rem;
+  }
+  .footer-nav-links a {
+    font-size: 0.7rem;
+  }
+  .subscribe-newsletter {
+    font-size: 1rem;
+  }
+  .newsletter-container input {
+    font-size: 0.7rem;
+  }
+  .social-links-container h2 {
+    font-size: 1rem;
+  }
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company-name {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .company-tagline {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-nav-links-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .footer-nav-links a {
+    font-size: 0.9rem;
+  }
+  .newsletter-container {
+    margin-top: 1rem;
+    padding-bottom: 0.1rem;
+  }
+  .subscribe-newsletter {
+    font-size: 1.2rem;
+  }
+  .newsletter-container input {
+    font-size: 0.9rem;
+  }
+  .social-links-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .footer-division {
+    flex-basis: 100%;
+  }
+  .footer-division:nth-child(3) {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .company-name {
+    font-size: 1.1rem;
+  }
+  .company-tagline {
+    font-size: 0.8rem;
+  }
+  .footer-nav-links-container h2 {
+    font-size: 1rem;
+  }
+  .footer-nav-links a {
+    font-size: 0.8rem;
+  }
+  .subscribe-newsletter {
+    font-size: 1rem;
+  }
+  .newsletter-container input {
+    font-size: 0.8rem;
+  }
+  .social-links-container h2 {
+    font-size: 1rem;
+  }
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+
+/* -------- Welcome Section ------- */
+@media screen and (max-width: 1200px) {
+  .welcome-content {
+    padding-right: 0;
+  }
+  .welcome-content h1 {
+    font-size: 3.5rem;
+  }
+  .welcome-content h3 {
+    font-size: 2.4rem;
+  }
+  .welcome-para {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .welcome-content h1 {
+    font-size: 3rem;
+  }
+  .welcome-content h3 {
+    font-size: 2rem;
+  }
+  .welcome-para {
+    font-size: 1.3rem;
+  }
+  .welcome-large-screen-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .welcome-section-main-container {
+    position: relative;
+    overflow: hidden;
+    padding: 3%;
+  }
+  .welcome-content {
+    width: 100%;
+    text-align: center;
+  }
+  .welcome-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 1px 5px var(--light-color);
+  }
+  .welcome-content h3 {
+    font-size: 2.8rem;
+    text-shadow: 3px 3px 0px var(--red-color);
+  }
+  .welcome-para {
+    font-size: 1.6rem;
+    text-shadow: 3px 3px 0px var(--red-color);
+  }
+  .welcome-large-screen-img {
+    display: none;
+  }
+  .welcome-small-screen-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 1rem auto;
+
+  }
+  .welcome-small-screen-img img{
+    animation: slideLeft 1s ease forwards;
+
+  }
+}
+@media screen and (max-width: 480px) {
+  .welcome-section-main-container {
+    padding: 0 1%;
+  }
+  .welcome-content h1 {
+    font-size: 3.2rem;
+  }
+  .welcome-content h3 {
+    font-size: 2.5rem;
+  }
+  .welcome-para {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px var(--red-color);
+  }
+}
+
+/* -------- About Section ------- */
+@media screen and (max-width: 1200px) {
+  .about-section-top-slogan {
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+  }
+  .about-content {
+    width: 60%;
+  }
+  .about-content-para {
+    font-size: 1rem;
+  }
+  .innerdiv {
+    padding: 1rem;
+  }
+  .about-info-box {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about-section-top-slogan {
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 10s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .about-content {
+    padding: 2rem 2.5rem;
+  }
+  .about-content-para {
+    font-size: 0.95rem;
+  }
+  .about-section-para-company-name {
+    font-size: 1.2rem;
+  }
+  .about-card-section-heading {
+    font-size: 2.6rem;
+  }
+  .innerdiv {
+    flex-basis: 32%;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-para {
+    font-size: 0.95rem;
+  }
+  .about-info-section-heading {
+    font-size: 2.6rem;
+  }
+  .about-info-box {
+    flex-basis: 42%;
+  }
+  .about-info-box h2 {
+    font-size: 1.3rem;
+  }
+  .about-info-box p {
+    font-size: 0.95rem;
+  }
+  .about-info-btn {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-section-top-slogan {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  .about-section {
+    background: linear-gradient(
+      to left,
+      rgb(255, 138, 146),
+      rgb(255, 175, 184)
+    );
+    justify-content: center;
+    padding: 5rem 0;
+    margin-top:-1rem;
+  }
+  .about-content {
+    width: 80%;
+    box-shadow: 2px 2px 10px 0 var(--dark-color);
+  }
+  .about-card-section {
+    margin-top: 3rem;
+  }
+  .about-card-section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-card-main-container {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .innerdiv {
+    padding: 1.5rem;
+  }
+  .about-info-section {
+    margin-top: 3rem;
+  }
+  .about-info-section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-info-main-container {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .about-info-box {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-section-top-slogan {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    transform: translateY(0);
+  }
+  .about-content {
+    width: 90%;
+  }
+  .about-content-para {
+    font-size: 0.9rem;
+  }
+  .about-section-para-company-name {
+    font-size: 1rem;
+  }
+  .about-card-section-heading {
+    font-size: 2.3rem;
+    padding: 0 1rem;
+  }
+  .about-card-main-container {
+    width: 90%;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-para {
+    font-size: 0.9rem;
+  }
+  .about-info-section-heading {
+    font-size: 2.3rem;
+    padding: 0 1rem;
+  }
+  .about-info-main-container {
+    width: 90%;
+  }
+  .about-info-box h2 {
+    font-size: 1.2rem;
+  }
+  .about-info-box p {
+    font-size: 0.9rem;
+  }
+  .about-info-btn {
+    font-size: 1rem;
+    padding: 1rem 1.3rem;
+  }
+}
+
+/* -------- Testimonials Section ------- */
+@media screen and (max-width: 1200px) {
+  .Testimonials-card {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-item {
+    padding: 0 0.5rem;
+  }
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Testimonials-heading {
+    font-size: 2.6rem;
+  }
+  .sub-heading {
+    font-size: 0.95rem;
+    width: 70%;
+  }
+
+  .Testimonial-recp-name {
+    font-size: 0.95rem;
+  }
+  .Testimonial-recp-msg {
+    font-size: 0.95rem;
+  }
+  .if-empty p {
+    font-size: 1.2rem;
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Testimonials-heading {
+    font-size: 2.5rem;
+  }
+  .sub-heading {
+    width: 80%;
+  }
+  .Testimonials-card {
+    width: 50vw;
+  }
+  .carousel-control {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .Testimonials-heading {
+    font-size: 2.3rem;
+    padding: 0 1rem;
+  }
+  .sub-heading {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .Testimonials-main-container {
+    padding: 0;
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-control {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    box-shadow: none;
+  }
+  .Testimonials-card {
+    width: 70vw;
+  }
+  .Testimonial-recp-name {
+    font-size: 0.9rem;
+  }
+  .Testimonial-recp-msg {
+    font-size: 0.9rem;
+  }
+  .if-empty {
+    padding: 1rem 0;
+
+  }
+  .if-empty p {
+    font-size: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.5);
+
+  }
+}
+
+/* -------- RegisterPage, LoginPage, ProfileFormPage, AddRequestPage, FeedbackPage, ContactPage ------- */
+@media screen and (max-width: 1200px) {
+  .form-page-container {
+    width: 70%;
+  }
+  .form-main-container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .form-page-container {
+    width: 80%;
+  }
+  .form-main-container {
+    width: 80%;
+  }
+  .form-heading {
+    font-size: 1.4rem;
+  }
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-page-container {
+    width: 90%;
+  }
+  .form-main-container {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .form-heading {
+    font-size: 1.3rem;
+  }
+  .form-container p {
+    font-size: 0.8rem;
+  }
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    font-size: 0.8rem;
+  }
+  #error-text {
+    font-size: 0.8rem;
+  }
+  .form-btn {
+    font-size: 1rem;
+  }
+  .reg-login-switch {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-page-container {
+    margin: 3rem auto;
+  }
+  .form-main-container {
+    padding: 1rem;
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.2);
+  }
+  .form-heading {
+    font-size: 1.3rem;
+  }
+  .form-container p {
+    font-size: 0.8rem;
+  }
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    padding: 0.9rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0px 0px 2px 0 rgba(0,0,0,0.2);
+  }
+  .show-password {
+    margin: -0.5rem 0 0 0.5rem;
+  }
+  #show-password-label {
+    font-size: 0.8rem;
+  }
+  #error-text {
+    font-size: 0.7rem;
+    margin: -0.1rem 0 0.5rem 0.5rem;
+  }
+  .form-btn {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  .reg-login-switch {
+    font-size: 0.8rem;
+  }
+}
+/* -------- RequestAddedPage --------- */
+@media screen and (max-width: 1200px) {
+  .request-added-container{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .request-added-container{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .request-added-container{
+    width: 80%;
+  }
+  .request-added-container h1{
+    font-size: 1.4rem;
+  }
+  .request-added-container p{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .request-added-container{
+    width: 90%;
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.5);
+    padding:1.5rem;
+
+  }
+  .request-added-container h1{
+    font-size: 1.2rem;
+  }
+  .request-added-container p{
+    font-size: 0.9rem;
+  }
+  .request-added-btn{
+    padding: 0.5rem 1rem;
+  }
+  .request-added-btn a{
+    font-size: 0.9rem;
+  }
+}
+
+
+/* -------- ViewRequestPage, MyRequestpage ------- */
+@media screen and (max-width: 1200px) {
+  .req-main-container {
+    padding: 2rem 0;
+  }
+  .req-cards-container {
+    gap: 1rem;
+    width: 100%;
+  }
+  .req-card {
+    padding: 1.2rem;
+  }
+  .req-card-footer {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .req-heading {
+    font-size: 2.3rem;
+  }
+  .req-cards-container {
+    margin-top: 2rem;
+  }
+  .req-card {
+    width: 45%;
+  }
+  .feedback-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .close-button {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .req-main-container {
+    padding: 1rem;
+  }
+  .req-heading {
+    font-size: 2rem;
+  }
+  .req-cards-container {
+    width: 80%;
+    justify-content: space-around;
+  }
+  .req-card {
+    width: 100%;
+  }
+  .req-card-header h2 {
+    font-size: 1.5rem;
+  }
+  .req-card-body p {
+    font-size: 0.95rem;
+  }
+  .req-card {
+    padding: 0.9rem;
+  }
+  .accepted-badge {
+    padding: 6px 10px;
+  }
+  .req-card-edit-btn a {
+    margin-right: 0.7rem;
+  }
+  .feedback-button-container {
+    right: 2px;
+  }
+  .feedback-button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+  .close-button {
+    font-size: 1.1rem;
+    right: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .req-main-container {
+    padding: 1.5rem 1rem;
+  }
+  .req-heading {
+    font-size: 1.8rem;
+  }
+  .req-card{
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.5);
+
+  }
+  .req-cards-container {
+    width: 95%;
+    margin-top: 1.5rem;
+  }
+  .req-card-header h2 {
+    font-size: 1.3rem;
+  }
+  .req-card-body p {
+    font-size: 0.9rem;
+  }
+  .req-card-edit-btn svg {
+    width: 1.2rem;
+  }
+  .req-card-delete-btn svg {
+    width: 1.2rem;
+  }
+  .feedback-button-container {
+    top: 40vh;
+    left: -2px;
+    position: fixed;
+  }
+  .feedback-button {
+    writing-mode: vertical-lr;
+    padding: 1.3rem 0.5rem;
+  }
+  .close-button {
+    top: 85%;
+    right: 2px;
+  }
+}
+
+/*-------- MyProfilePage  --------*/
+@media screen and (max-width: 1200px) {
+  .profile-container{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .profile-container{
+    width: 100%;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.5);
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile-main-container{
+    width: 65vw;
+  }
+  .profile-details img{
+    width: 170px;
+    margin-bottom: 1.5rem; 
+  }
+  .profile-details h2{
+    font-size: 1.4rem;
+  }
+  .profile-details p{
+    font-size: 1rem;
+  }
+.edit-profile-btn svg {
+  font-size: 1.8rem;
+}
+}
+@media screen and (max-width: 480px) {
+  .profile-main-container{
+    width:100vw;
+    height: 60vh;
+    margin: 1rem 0;
+  }
+  .profile-details img{
+    width: 165px;
+    margin-bottom: 1.5rem; 
+  }
+  .profile-details h2{
+    font-size: 1.3rem;
+    text-shadow: none;
+  }
+  .profile-details p{
+    font-size: 1rem;
+    text-shadow: none;
+  }
+  .edit-profile-btn{
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  }
+.edit-profile-btn svg {
+  font-size: 1.7rem;
+}
+} 
+
+/* ---------our services & web guide section------- */
+@media (max-width: 1200px) {
+  .services-box {
+    background-image: url(assets/services-bg.png);
+    justify-content: center;
+    padding: 2rem 4rem;
+  }
+
+  .services-content-box {
+    width: 60%;
+  }
+
+  .webguide-steps-inner-content {
+    padding: 3rem 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-box {
+    padding: 2rem 2rem;
+    height: 70vh;
+  }
+
+  .services-content-box {
+    width: 70%;
+  }
+
+  .webguide-inner-container h1 {
+    font-size: 2.4rem;
+  }
+
+  .webguide-steps-inner-content {
+    padding: 3rem 2rem;
+  }
+
+  .webguide-inner-video video {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .services-content-box {
+    width: 90%;
+  }
+
+  .webguide-inner-container h1 {
+    font-size: 2rem;
+  }
+
+  .webguide-steps-container {
+    flex-direction: column;
+  }
+
+  .webguide-inner-video {
+    width: 90%;
+    padding: 1rem;
+    order: -1;
+  }
+
+  .webguide-steps-inner-content {
+    width: 90%;
+    padding:1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-content-box {
+    padding: 2rem;
+    font-size: 0.95rem;
+  }
+  .services-content-box h1{
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .webguide-inner-container{
+    margin-top: 1.5rem;
+  }
+  .webguide-inner-container h1 {
+    font-size: 1.6rem;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+  }
+
+  .webguide-steps-inner-content{
+    padding: 0.5rem;
+  }
+  .webguide-inner-video{
+    padding: 0.5rem;
+  }
+  .webguide-steps-inner-content h4 {
+    font-size: 1rem;
+    text-align:left;
+  }
+
+  .webguide-steps-inner-content p {
+    font-size: 0.9rem;
+  }
+
+  .webguide-inner-video video {
+    width: 100%;
+    height: 100%;
+    order: -1;
+  }
+}
+
+
+/* --------Blood-Guide-page-------- */
+
+@media (max-width: 1200px) {
+  .blood-guide-section {
+    padding: 2rem ;
+  }
+  .blood-guide-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .blood-guide-section h3 {
+    width: 80%;
+    font-size: 1rem;
+  }
+ 
+  .blood-guide-section div {
+    gap: 4rem;
+  }
+
+  .blood-guide-section p,
+  ul {
+    width: 50%;
+    font-size: 0.95rem; 
+  }
+
+  .blood-guide-section img {
+    width: 40%;
+  }
+
+  .blood-guide-section li {
+    font-size: 0.95rem; 
+  }
+}
+
+@media (max-width: 992px) {
+  .blood-guide-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .blood-guide-section h3 {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .blood-guide-section div {
+    flex-direction: column;
+    gap: 2rem;
+    width:100%;
+  }
+
+  .blood-guide-section p,
+  ul {
+    width: 80%;
+    font-size: 0.9rem; 
+  }
+
+  .blood-guide-section img {
+    width: 70%;
+    order: -1;
+  }
+
+  .blood-guide-section li {
+    font-size: 0.9rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .blood-guide-section {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .blood-guide-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .blood-guide-section h3 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .blood-guide-section div {
+    gap: 1rem;
+  }
+
+
+  .blood-guide-section p,
+  ul {
+    width: 90%;
+    font-size: 0.85rem; 
+  }
+
+  .blood-guide-section img {
+    width: 75%;
+  }
+
+
+  .blood-guide-section h6 {
+    font-size: 1.2rem;
+  }
+
+  .blood-guide-section li {
+    font-size: 0.85rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .blood-guide-section{
+    padding: 1rem;
+  }
+  .blood-guide-section h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .blood-guide-section h3 {
+    font-size: 0.95rem;
+  }
+
+  .blood-guide-section p,
+  ul {
+    width: 100%;
+    font-size: 0.9rem; 
+  }
+
+  .blood-guide-section img {
+    width: 95%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .blood-guide-section h6 {
+    font-size: 1rem;
+  }
+
+  .blood-guide-section li {
+    font-size: 0.9rem; 
+  }
+}
