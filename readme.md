@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Donor Connect is a web-based platform designed to connect blood donors with recipients in need. The primary goal is to streamline the blood donation process, ensuring that those who require blood transfusions can receive timely assistance.
  
 Features:
@@ -18,6 +17,3 @@ Recipients: Create and manage your donation requests, and search for potential d
 
 collaborators:
 This project is a collaborative effort between Muskan and Naima.
-=======
-###This is a readme file
->>>>>>> origin/main
