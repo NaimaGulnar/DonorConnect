@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
         return storedTokens ? jwtDecode(storedTokens) : null;
     });
 
-    const baseURL = "https://donorconnect.pythonanywhere.com";
+    const baseURL = "https://dcapi.pythonanywhere.com";
 
     const [loading, setLoading] = useState(true);
 

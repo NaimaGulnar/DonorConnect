@@ -40,7 +40,7 @@ export default function MyRequest() {
         }
     }, [authTokens]);
 
-    const baseURL = "https://donorconnect.pythonanywhere.com";
+    const baseURL = "https://dcapi.pythonanywhere.com";
 
     useEffect(() => {
         const fetchRequest = async () => {

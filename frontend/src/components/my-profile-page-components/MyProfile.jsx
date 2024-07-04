@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export default function MyProfile() {
     const { authTokens } = useContext(AuthContext) || {};
-    const baseURL = "https://donorconnect.pythonanywhere.com";
+    const baseURL = "https://dcapi.pythonanywhere.com";
 
     const [id, setId] = useState('');
     const [loading, setLoading] = useState(true); 
