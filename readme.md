@@ -74,13 +74,18 @@ The mission is simple - "To bridge the gap between blood recipients and blood do
     source env/bin/activate  # for Linux user
     ```
 
-3. Navigate to the backend folder and install dependencies:
+3. Create a `.gitignore` file inside `env` folder and write inside it:
+    ```
+    *
+    ```
+
+4. Navigate to the backend folder and install dependencies:
     ```sh
     cd backend
     pip install -r requirements.txt
     ```
 
-4. Set up the environment variables:
+5. Set up the environment variables:
 
     - Create a `.env` file in the `backend` directory (where `manage.py` is located) and ensure you have the following variables set. Replace the placeholder information with your actual data:
         ```
@@ -90,7 +95,7 @@ The mission is simple - "To bridge the gap between blood recipients and blood do
         EMAIL_PORT=587
         ```
 
-5. Apply migrations and start the server:
+6. Apply migrations and start the server:
     ```sh
     python manage.py migrate
     python manage.py runserver
