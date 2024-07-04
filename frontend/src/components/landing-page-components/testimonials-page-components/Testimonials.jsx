@@ -9,7 +9,7 @@ export default function Testimonials() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const baseURL = 'https://donorconnect.pythonanywhere.com'
+    const baseURL = 'https://dcapi.pythonanywhere.com'
 
     useEffect(() => {
         const fetchFeedback = async () => {

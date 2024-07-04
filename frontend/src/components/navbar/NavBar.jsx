@@ -23,7 +23,7 @@ export default function NavBar() {
 
     const [navOpen, setNavOpen] = useState(false);
 
-    const baseURL = 'https://donorconnect.pythonanywhere.com'
+    const baseURL = 'https://dcapi.pythonanywhere.com'
 
     useEffect(() => {
         if (authTokens && authTokens.access) {
