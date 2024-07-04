@@ -1,19 +1,101 @@
-Donor Connect is a web-based platform designed to connect blood donors with recipients in need. The primary goal is to streamline the blood donation process, ensuring that those who require blood transfusions can receive timely assistance.
- 
-Features:
-User Registration and Authentication: Secure login and sign-up functionality for both donors and recipients.
-Donor Search: Recipients can search for nearby donors.
-Donation Requests: Recipients can create and manage donation requests.
-Notifications: Donors receive notifications for donation requests.
-Profile Management: Users can update their profiles and view their donation history.
+# DonorConnect
 
-Usage:
-Open your web browser and go to http://donorconnect.netlify.app.
-Register as a new user or log in with your existing credentials.
-Explore the platform:
-Donors: Update your profile, search for donation requests, and manage your donations.
-Recipients: Create and manage your donation requests, and search for potential donors.
+DonorConnect is a web platform designed to connect individuals in urgent need of blood with generous donors. 
 
+The mission is simple - "To bridge the gap between blood recipients and blood donors seamlessly and efficiently".
 
-collaborators:
-This project is a collaborative effort between Muskan and Naima.
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
+- [Installation](#installation)
+- [Authors](#authors)
+
+## Features
+
+- Easy registration for donors and recipients.
+- Instant alerts to notify donors about urgent blood needs.
+- Efficient coordination between donors and recipients.
+- Gratitude system to acknowledge successful donations.
+
+## Technologies Used
+
+### Frontend
+
+- ReactJS
+
+### Backend 
+
+- Django REST Framework
+
+## Deployment
+
+- Frontend: Netlify
+- Backend: PythonAnywhere
+
+## Installation
+
+### Prerequisites
+
+- Node.js
+- Python
+- Git
+
+### Frontend Setup
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/NaimaGulnar/DonorConnect.git
+    cd DonorConnect/frontend
+    ```
+
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+3. Start the development server:
+    ```sh
+    npm run dev
+    ```
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+    ```sh
+    cd ../backend
+    ```
+
+2. Create a virtual environment and activate it:
+    ```sh
+    python -m venv env
+    env\Scripts\activate  # for Windows user
+    source env/bin/activate  # for Linux user
+    ```
+
+3. Install dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Set up the environment variables:
+
+    - Create a `.env` file in the `backend` directory with the following content:
+        ```
+        SECRET_KEY=your_secret_key_here
+        EMAIL_HOST_USER=your_email@example.com
+        EMAIL_HOST_PASSWORD=your_email_password
+        EMAIL_PORT=587
+        ```
+
+5. Apply migrations and start the server:
+    ```sh
+    python manage.py migrate
+    python manage.py runserver
+    ```
+
+## Authors
+
+- [NaimaGulnar](https://www.github.com/NaimaGulnar)
+- [Muskan-FATIMA](https://www.github.com/Muskan-FATIMA)
