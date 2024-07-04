@@ -62,9 +62,9 @@ The mission is simple - "To bridge the gap between blood recipients and blood do
 
 ### Backend Setup
 
-1. Navigate to the backend directory:
+1. Navigate to the `DonorConnect` directory:
     ```sh
-    cd ../backend
+    cd ../
     ```
 
 2. Create a virtual environment and activate it:
@@ -74,14 +74,15 @@ The mission is simple - "To bridge the gap between blood recipients and blood do
     source env/bin/activate  # for Linux user
     ```
 
-3. Install dependencies:
+3. Navigate to the backend folder and install dependencies:
     ```sh
+    cd backend
     pip install -r requirements.txt
     ```
 
 4. Set up the environment variables:
 
-    - Create a `.env` file in the `backend` directory with the following content:
+    - Create a `.env` file in the `backend` directory (where `manage.py` is located) and ensure you have the following variables set. Replace the placeholder information with your actual data:
         ```
         SECRET_KEY=your_secret_key_here
         EMAIL_HOST_USER=your_email@example.com
